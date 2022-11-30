@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServer", "GrpcServer\GrpcServer.csproj", "{1BDD250D-8C9F-4569-9F13-BF8A0A8E0015}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcServer", "GrpcServer\GrpcServer.csproj", "{1BDD250D-8C9F-4569-9F13-BF8A0A8E0015}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "GrpcClient\GrpcClient.csproj", "{F37438A1-CA53-43B7-932A-24E416DCD108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClient", "GrpcClient\GrpcClient.csproj", "{F37438A1-CA53-43B7-932A-24E416DCD108}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcCodeFirstContracts", "GrpcCodeFirstContracts\GrpcCodeFirstContracts.csproj", "{3B9B2B55-FFD5-42A8-9965-2D3F1BAEC487}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcCodeFirstContracts", "GrpcCodeFirstContracts\GrpcCodeFirstContracts.csproj", "{3B9B2B55-FFD5-42A8-9965-2D3F1BAEC487}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcCodeFirstServer", "GrpcCodeFirstServer\GrpcCodeFirstServer.csproj", "{55ED3B99-0CD1-46D5-AFDE-61D5DEED5733}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcCodeFirstServer", "GrpcCodeFirstServer\GrpcCodeFirstServer.csproj", "{55ED3B99-0CD1-46D5-AFDE-61D5DEED5733}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcCodeFirstClient", "GrpcCodeFirstClient\GrpcCodeFirstClient.csproj", "{163D2FAA-0D94-4614-9E4A-A55433947979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcCodeFirstClient", "GrpcCodeFirstClient\GrpcCodeFirstClient.csproj", "{163D2FAA-0D94-4614-9E4A-A55433947979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcGenericTypeContracts", "GrpcGenericTypeContracts\GrpcGenericTypeContracts.csproj", "{B31D844A-F9CB-45F3-87F6-69B96205AF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcGenericTypeServer", "GrpcGenericTypeServer\GrpcGenericTypeServer.csproj", "{AA93189F-E754-48C5-B9D3-675CC69CAD31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcGenericTypeClient", "GrpcGenericTypeClient\GrpcGenericTypeClient.csproj", "{B4542844-BC97-4596-B671-D7F757942A3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{163D2FAA-0D94-4614-9E4A-A55433947979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{163D2FAA-0D94-4614-9E4A-A55433947979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{163D2FAA-0D94-4614-9E4A-A55433947979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B31D844A-F9CB-45F3-87F6-69B96205AF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31D844A-F9CB-45F3-87F6-69B96205AF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31D844A-F9CB-45F3-87F6-69B96205AF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31D844A-F9CB-45F3-87F6-69B96205AF70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA93189F-E754-48C5-B9D3-675CC69CAD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA93189F-E754-48C5-B9D3-675CC69CAD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA93189F-E754-48C5-B9D3-675CC69CAD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA93189F-E754-48C5-B9D3-675CC69CAD31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4542844-BC97-4596-B671-D7F757942A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4542844-BC97-4596-B671-D7F757942A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4542844-BC97-4596-B671-D7F757942A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4542844-BC97-4596-B671-D7F757942A3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
