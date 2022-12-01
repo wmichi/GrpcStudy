@@ -22,21 +22,19 @@ internal class Program
 
 
         // GenericTypeForStringService
-        var genericTypeForStringClient = channel.CreateGrpcService<IGenericTypeService<string>>();
-        var simpleReply = await genericTypeForStringClient.SimpleGetAsync(
+        var genericTypeClient = channel.CreateGrpcService<IGenericTypeService>();
+        var simpleReply = await genericTypeClient.SimpleGetAsync(
             new SimpleGetRequest { Message = "This is a Message for GenericTypeService - SimpleGetAsync." });
         Console.WriteLine($"{simpleReply.Result}");
         
-        var genericTypeForStringReply = await genericTypeForStringClient.GenericTypeGetAsync(
+        var genericTypeForStringReply = await genericTypeClient.StringGetAsync(
             new GenericTypeGetRequest { Message = "This is a Message for GenericTypeService - GenericTypeGetAsync." });
         Console.WriteLine($"{genericTypeForStringReply.Result}");
 
-
-        // GenericTypeForModelService
-        var genericTypeForModelClient = channel.CreateGrpcService<IGenericTypeService<ModelForGenericType>>();
-        var genericTypeForModelReply = await genericTypeForModelClient.GenericTypeGetAsync(
+        var genericTypeForModelReply = await genericTypeClient.ModelGetAsync(
             new GenericTypeGetRequest { Message = "This is a Message for GenericTypeService - GenericTypeGetAsync." });
         Console.WriteLine($"Result Id: {genericTypeForModelReply.Result.Id} / {genericTypeForModelReply.Result.ResultMessage}");
+
 
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();

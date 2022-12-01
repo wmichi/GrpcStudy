@@ -1,5 +1,6 @@
 using GrpcGenericTypeContracts;
 using GrpcGenericTypeServer.Services;
+using ProtoBuf.Grpc.Reflection;
 using ProtoBuf.Grpc.Server;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,8 +21,13 @@ app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapGrpcService<SimpleTypeService>();
-    endpoints.MapGrpcService<GenericTypeForStringService>();
-    endpoints.MapGrpcService<GenericTypeForModelService>();
+    endpoints.MapGrpcService<GenericTypeService>();
 });
+
+// for checking the generated proto file
+var generator = new SchemaGenerator();
+var schema = generator.GetSchema<IGenericTypeService>();
+
+Console.WriteLine(schema);
 
 app.Run();

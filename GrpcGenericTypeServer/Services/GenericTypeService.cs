@@ -2,11 +2,11 @@
 
 namespace GrpcGenericTypeServer.Services;
 
-public class GenericTypeForStringService : IGenericTypeService<string>
+public class GenericTypeService : IGenericTypeService
 {
-    private readonly ILogger<GenericTypeForStringService> _logger;
+    private readonly ILogger<GenericTypeService> _logger;
 
-    public GenericTypeForStringService(ILogger<GenericTypeForStringService> logger)
+    public GenericTypeService(ILogger<GenericTypeService> logger)
     {
         _logger = logger;
     }
@@ -22,40 +22,19 @@ public class GenericTypeForStringService : IGenericTypeService<string>
         };
     }
 
-    public async Task<GenericTypeGetResponse<string>> GenericTypeGetAsync(GenericTypeGetRequest request)
+    public async Task<GenericTypeGetResponse<string>> StringGetAsync(GenericTypeGetRequest request)
     {
         _logger.LogInformation("Execute GenericTypeGetAsync of GenericTypeForStringService");
 
         var result = $"Received the message '{request.Message}'  from the client";
-        return new GenericTypeGetResponse<string>
+        return new GenericTypeGetResponse<string>()
         {
             Result = result
         };
 
     }
-}
 
-public class GenericTypeForModelService : IGenericTypeService<ModelForGenericType>
-{
-    private readonly ILogger<GenericTypeForModelService> _logger;
-
-    public GenericTypeForModelService(ILogger<GenericTypeForModelService> logger)
-    {
-        _logger = logger;
-    }
-
-    public async Task<SimpleGetResponse> SimpleGetAsync(SimpleGetRequest request)
-    {
-        _logger.LogInformation("Execute SimpleGetAsync of GenericTypeForStringService");
-
-        var result = $"Received the message '{request.Message}'  from the client";
-        return new SimpleGetResponse
-        {
-            Result = result
-        };
-    }
-
-    public async Task<GenericTypeGetResponse<ModelForGenericType>> GenericTypeGetAsync(GenericTypeGetRequest request)
+    public async Task<GenericTypeGetResponse<ModelForGenericType>> ModelGetAsync(GenericTypeGetRequest request)
     {
         _logger.LogInformation("Execute GenericTypeGetAsync of GenericTypeForModelService");
 
@@ -68,6 +47,7 @@ public class GenericTypeForModelService : IGenericTypeService<ModelForGenericTyp
                 ResultMessage = result
             }
         };
-
     }
 }
+
+
